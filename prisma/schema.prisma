@@ -1,0 +1,123 @@
+// Modelo de datos de Alero.
+// Todas las fechas se guardan en UTC; la zona horaria va aparte como string IANA.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Modality {
+  ONLINE
+  IN_PERSON
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+/// Persona que dicta las clases o asesorías.
+model Instructor {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  timezone  String   @default("America/Bogota")
+  bio       String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  services     Service[]
+  availability AvailabilityRule[]
+  exceptions   AvailabilityException[]
+  bookings     Booking[]
+}
+
+/// Tipo de clase o asesoría que se puede agendar.
+model Service {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  name            String
+  description     String?
+  durationMinutes Int
+  priceCents      Int      @default(0)
+  currency        String   @default("COP")
+  modality        Modality @default(ONLINE)
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  instructorId String
+  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  bookings     Booking[]
+}
+
+/// Horario semanal recurrente. weekday: 0 = domingo ... 6 = sábado.
+/// startMinute / endMinute: minutos desde medianoche en la zona horaria del instructor.
+model AvailabilityRule {
+  id          String @id @default(cuid())
+  weekday     Int
+  startMinute Int
+  endMinute   Int
+
+  instructorId String
+  instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade)
+
+  @@index([instructorId, weekday])
+}
+
+/// Días u horas bloqueadas (vacaciones, festivos, citas externas).
+model AvailabilityException {
+  id      String   @id @default(cuid())
+  startAt DateTime
+  endAt   DateTime
+  reason  String?
+
+  instructorId String
+  instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade)
+
+  @@index([instructorId, startAt])
+}
+
+/// Persona que recibe la clase. Puede reservar como invitado, sin cuenta.
+model Student {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  phone     String?
+  timezone  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bookings Booking[]
+}
+
+/// Reserva de una clase. La no superposición se garantiza con una
+/// restricción EXCLUDE en SQL (ver prisma/sql/no_overlap_constraint.sql).
+model Booking {
+  id              String        @id @default(cuid())
+  startAt         DateTime
+  endAt           DateTime
+  status          BookingStatus @default(PENDING)
+  studentTimezone String
+  notes           String?
+  cancelReason    String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  serviceId    String
+  service      Service    @relation(fields: [serviceId], references: [id])
+  instructorId String
+  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  studentId    String
+  student      Student    @relation(fields: [studentId], references: [id])
+
+  @@index([instructorId, startAt])
+  @@index([studentId])
+}

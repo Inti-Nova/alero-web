@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: alero-web-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: alero
+      POSTGRES_PASSWORD: alero
+      POSTGRES_DB: alero_web
+    ports:
+      - "5440:5432"
+    volumes:
+      - alero_pgdata:/var/lib/postgresql/data
+
+volumes:
+  alero_pgdata:
