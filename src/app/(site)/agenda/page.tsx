@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Disclaimer } from "@/components/disclaimer";
 import { PageHeader, Section } from "@/components/ui";
 import { listServices } from "@/modules/catalog";
@@ -11,9 +10,11 @@ export const metadata: Metadata = {
     "Reserva tu sesión de acompañamiento en adaptación escolar o bilingüismo temprano, o una clase de inglés personalizada.",
 };
 
-export const revalidate = 600;
+type Props = { searchParams: Promise<{ servicio?: string | string[] }> };
 
-export default async function AgendaPage() {
+export default async function AgendaPage({ searchParams }: Props) {
+  const { servicio } = await searchParams;
+  const requested = Array.isArray(servicio) ? servicio[0] : servicio;
   const services: WizardService[] = (await listServices()).map((s) => ({
     slug: s.slug,
     name: s.name,
@@ -32,9 +33,10 @@ export default async function AgendaPage() {
       />
 
       <Section tone="crema-dark">
-        <Suspense fallback={<p className="text-tinta-soft">Cargando la agenda…</p>}>
-          <BookingWizard services={services} />
-        </Suspense>
+        <BookingWizard
+          services={services}
+          initialServiceSlug={services.find((s) => s.slug === requested)?.slug ?? ""}
+        />
       </Section>
 
       <Section>

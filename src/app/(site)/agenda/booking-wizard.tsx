@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import {
   useActionState,
   useEffect,
@@ -61,14 +60,15 @@ function FieldError({ message }: { message?: string }) {
   );
 }
 
-export function BookingWizard({ services }: { services: WizardService[] }) {
-  const params = useSearchParams();
-  const requested = params.get("servicio");
-
+export function BookingWizard({
+  services,
+  initialServiceSlug,
+}: {
+  services: WizardService[];
+  initialServiceSlug: string;
+}) {
   const timezone = useBrowserTimezone();
-  const [serviceSlug, setServiceSlug] = useState<string>(
-    services.find((s) => s.slug === requested)?.slug ?? "",
-  );
+  const [serviceSlug, setServiceSlug] = useState<string>(initialServiceSlug);
   const [month, setMonth] = useState(() => monthKey(new Date()));
   const [availability, setAvailability] = useState<MonthAvailability | null>(null);
   const [selectedDay, setSelectedDay] = useState<string | null>(null);
