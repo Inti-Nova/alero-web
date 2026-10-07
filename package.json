@@ -2,6 +2,7 @@
   "name": "alero-web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,20 +11,25 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:deploy": "prisma migrate deploy",
-    "db:seed": "tsx prisma/seed.ts",
-    "db:studio": "prisma studio",
-    "postinstall": "prisma generate"
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "migrate": "payload migrate",
+    "migrate:create": "payload migrate:create"
   },
   "dependencies": {
-    "@prisma/client": "^6.16.0",
+    "@payloadcms/db-postgres": "^3.73.0",
+    "@payloadcms/next": "^3.73.0",
+    "@payloadcms/richtext-lexical": "^3.73.0",
+    "@payloadcms/translations": "^3.73.0",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
+    "graphql": "^16.11.0",
     "next": "16.4.0",
+    "payload": "^3.73.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "sharp": "^0.34.0",
     "zod": "^4.1.0"
   },
   "devDependencies": {
@@ -35,9 +41,7 @@
     "eslint-config-next": "16.4.0",
     "prettier": "^3.6.0",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "prisma": "^6.16.0",
     "tailwindcss": "^4",
-    "tsx": "^4.20.0",
     "typescript": "^5",
     "vitest": "^3.2.0"
   }

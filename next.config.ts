@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
-import path from "node:path";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     // Evita que Next tome como raíz la carpeta de usuario por un package-lock.json ajeno.
-    root: path.resolve(__dirname),
+    root: process.cwd(),
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
@@ -16,4 +14,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);

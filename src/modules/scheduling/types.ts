@@ -14,7 +14,7 @@ export interface TimeRange {
   endAt: Date; // UTC
 }
 
-export interface Slot extends TimeRange {}
+export type Slot = TimeRange;
 
 export interface SlotQuery {
   /** Día en formato YYYY-MM-DD, interpretado en la zona del instructor. */
