@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:netlify": "payload migrate && next build",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
@@ -21,6 +22,7 @@
     "@payloadcms/db-postgres": "^3.73.0",
     "@payloadcms/next": "^3.73.0",
     "@payloadcms/richtext-lexical": "^3.73.0",
+    "@payloadcms/storage-s3": "^3.73.0",
     "@payloadcms/translations": "^3.73.0",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
@@ -29,12 +31,12 @@
     "payload": "^3.73.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "sharp": "^0.34.0",
+    "sharp": "^0.35.5",
     "zod": "^4.1.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
@@ -43,6 +45,11 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^3.2.0"
+    "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "undici": "^7.30.0",
+    "sass": "^1.105.0",
+    "dompurify": "^3.4.16"
   }
 }

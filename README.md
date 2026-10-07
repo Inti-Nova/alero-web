@@ -90,6 +90,21 @@ horario de lunes a viernes, y pide crear el primer usuario del panel.
 | `npm run migrate:create` | Crea una migración para producción tras cambiar el esquema |
 | `npm run migrate` | Aplica migraciones en producción |
 
+## Despliegue en Netlify
+
+Infraestructura: Netlify (app y funciones), Neon (PostgreSQL), Cloudflare R2 (imágenes)
+y Resend (correo). Todo con planes gratuitos suficientes para el lanzamiento.
+
+1. Variables de entorno en Netlify (Site configuration → Environment variables):
+   `DATABASE_URL` (cadena *pooled* de Neon), `PAYLOAD_SECRET`, `NEXT_PUBLIC_SITE_URL`,
+   `NEXT_PUBLIC_BRAND_NAME`, `RESEND_API_KEY`, `EMAIL_FROM`, `S3_BUCKET`,
+   `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, `S3_ENDPOINT`, `S3_REGION`, `S3_PUBLIC_URL`.
+2. El build corre `npm run build:netlify`, que aplica las migraciones de `src/migrations`
+   y luego compila. Está definido en `netlify.toml`.
+3. Cada cambio de esquema (colecciones o campos) requiere una migración nueva antes de
+   subir: `npm run migrate:create -- --name <descripcion>` y commit de `src/migrations`.
+4. Tras el primer despliegue, entrar a `/admin` para crear el usuario administrador.
+
 ## Decisiones
 
 - Agenda propia en lugar de Calendly: los datos de familias y menores quedan bajo control
@@ -102,5 +117,5 @@ horario de lunes a viernes, y pide crear el primer usuario del panel.
 - La base de datos impide reservas superpuestas con una restricción `EXCLUDE` que se aplica
   al arrancar (`src/cms/db-constraints.ts`), además de la validación en la colección.
 - En desarrollo Payload sincroniza el esquema solo. En producción se usan migraciones.
-- Las imágenes se guardan en disco en `media/`. Antes de desplegar en Vercel hay que
-  cambiar a un adaptador de almacenamiento (Vercel Blob o S3).
+- En local las imágenes se guardan en disco en `media/`. En producción van a Cloudflare R2
+  mediante el adaptador S3 de Payload, que se activa solo cuando existen las variables `S3_*`.

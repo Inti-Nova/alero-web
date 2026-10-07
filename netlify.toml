@@ -1,0 +1,15 @@
+# Configuración de despliegue en Netlify.
+# Netlify detecta Next.js y usa su adaptador OpenNext automáticamente; el plugin se
+# declara igual para fijar la versión y evitar sorpresas.
+
+[build]
+  command = "npm run build:netlify"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Payload lee las variables en build para correr las migraciones antes de compilar.
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

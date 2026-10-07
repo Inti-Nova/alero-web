@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Código generado por Payload: migraciones y mapa de componentes del panel.
+    "src/migrations/**",
+    "src/app/(payload)/admin/importMap.js",
   ]),
 ]);
 

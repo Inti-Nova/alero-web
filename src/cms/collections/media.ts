@@ -19,7 +19,7 @@ export const Media: CollectionConfig = {
     delete: authenticated,
   },
   upload: {
-    // En producción se reemplaza por un adaptador de almacenamiento (Vercel Blob o S3).
+    // Solo en local. En producción el adaptador S3 (src/cms/storage.ts) sube los archivos a R2.
     staticDir: path.resolve(dirname, "../../../media"),
     mimeTypes: ["image/*"],
     imageSizes: [

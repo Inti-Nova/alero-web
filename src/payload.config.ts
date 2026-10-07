@@ -17,11 +17,15 @@ import { ensureDatabaseConstraints } from "./cms/db-constraints";
 import { AgendaSettings } from "./cms/globals/agenda-settings";
 import { SiteSettings } from "./cms/globals/site-settings";
 import { seedIfEmpty } from "./cms/seed";
+import { storagePlugins } from "./cms/storage";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
+  // URL pública del sitio: Payload la usa en enlaces de correos del panel
+  // (restablecer contraseña) y en la vista previa de los recursos.
+  serverURL: process.env.NEXT_PUBLIC_SITE_URL || undefined,
   admin: {
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
@@ -55,7 +59,11 @@ export default buildConfig({
   graphQL: { disable: true },
   db: postgresAdapter({
     pool: { connectionString: process.env.DATABASE_URL || "" },
+    // En desarrollo Payload sincroniza el esquema solo (push). En producción no:
+    // el build de Netlify corre `payload migrate` con los archivos de esta carpeta.
+    migrationDir: path.resolve(dirname, "migrations"),
   }),
+  plugins: [...storagePlugins],
   sharp,
   onInit: async (payload) => {
     await ensureDatabaseConstraints(payload);
