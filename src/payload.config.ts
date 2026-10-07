@@ -25,10 +25,21 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
+    // El tema se define en src/app/(payload)/custom.css; se fuerza el modo claro
+    // para que la paleta cálida de la marca se vea igual en cualquier dispositivo.
+    theme: "light",
     meta: {
       titleSuffix: " · Alero",
+      description: "Panel de administración de Alero",
     },
     dateFormat: "d MMM yyyy, HH:mm",
+    components: {
+      graphics: {
+        Logo: "/cms/components/logo#Logo",
+        Icon: "/cms/components/logo#Icon",
+      },
+      beforeDashboard: ["/cms/components/welcome#Welcome"],
+    },
   },
   i18n: {
     supportedLanguages: { es },

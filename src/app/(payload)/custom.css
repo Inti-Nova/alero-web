@@ -1,1 +1,205 @@
-/* Ajustes visuales del panel de administración de Payload. */
+/* Tema del panel de administración de Alero.
+ * Payload construye toda su interfaz a partir de estas escalas; aquí se
+ * sustituyen los grises neutros por la paleta cálida de la marca
+ * (crema #F7F1E8, tinta #3A2E26, terracota #D98B6B, salvia #8FA894).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap");
+
+:root {
+  /* Escala base: 0 casi blanco · 50 crema · 800 tinta · 1000 casi negro */
+  --color-base-0: #fffdf9;
+  --color-base-50: #f7f1e8;
+  --color-base-100: #efe6d8;
+  --color-base-150: #e4d9ca;
+  --color-base-200: #d1cac1;
+  --color-base-250: #c5bdb4;
+  --color-base-300: #b8b0a7;
+  --color-base-350: #aba39a;
+  --color-base-400: #9f968d;
+  --color-base-450: #928981;
+  --color-base-500: #867c74;
+  --color-base-550: #796f67;
+  --color-base-600: #6b5e54;
+  --color-base-650: #60554d;
+  --color-base-700: #534840;
+  --color-base-750: #473b33;
+  --color-base-800: #3a2e26;
+  --color-base-850: #30261f;
+  --color-base-900: #261e18;
+  --color-base-950: #1c1612;
+  --color-base-1000: #120e0b;
+
+  /* Éxito: salvia */
+  --color-success-50: #dee1da;
+  --color-success-100: #ced4cb;
+  --color-success-150: #bec7bd;
+  --color-success-200: #aebaae;
+  --color-success-250: #9ead9f;
+  --color-success-300: #8ea091;
+  --color-success-350: #7f9282;
+  --color-success-400: #6f8573;
+  --color-success-450: #5f7865;
+  --color-success-500: #4f6b56;
+  --color-success-550: #4d6652;
+  --color-success-600: #4b614e;
+  --color-success-650: #4a5b4a;
+  --color-success-700: #485646;
+  --color-success-750: #465142;
+  --color-success-800: #444c3e;
+  --color-success-850: #434739;
+  --color-success-900: #414235;
+  --color-success-950: #3f3c31;
+
+  /* Aviso: terracota */
+  --color-warning-50: #edded5;
+  --color-warning-100: #e5cfc4;
+  --color-warning-150: #ddc0b2;
+  --color-warning-200: #d4b1a1;
+  --color-warning-250: #cca290;
+  --color-warning-300: #c3937f;
+  --color-warning-350: #bb856e;
+  --color-warning-400: #b3765c;
+  --color-warning-450: #aa674b;
+  --color-warning-500: #a2583a;
+  --color-warning-550: #995438;
+  --color-warning-600: #905137;
+  --color-warning-650: #874d35;
+  --color-warning-700: #7f4a33;
+  --color-warning-750: #764632;
+  --color-warning-800: #6d4330;
+  --color-warning-850: #643f2e;
+  --color-warning-900: #5b3b2c;
+  --color-warning-950: #52382b;
+
+  /* Error: rojo cálido */
+  --color-error-50: #f1dad5;
+  --color-error-100: #eac9c4;
+  --color-error-150: #e4b9b2;
+  --color-error-200: #dda8a1;
+  --color-error-250: #d69790;
+  --color-error-300: #d0877f;
+  --color-error-350: #c9766e;
+  --color-error-400: #c2655c;
+  --color-error-450: #bc554b;
+  --color-error-500: #b5443a;
+  --color-error-550: #ab4238;
+  --color-error-600: #a04037;
+  --color-error-650: #963e35;
+  --color-error-700: #8b3d33;
+  --color-error-750: #813b32;
+  --color-error-800: #763930;
+  --color-error-850: #6c372e;
+  --color-error-900: #61352c;
+  --color-error-950: #57332b;
+
+  --theme-bg: var(--color-base-50);
+  --theme-input-bg: var(--color-base-0);
+
+  --font-body: "Nunito", "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", "Playfair Display", Georgia, serif;
+
+  --style-radius-s: 8px;
+  --style-radius-m: 12px;
+  --style-radius-l: 20px;
+
+  --alero-terracota: #d98b6b;
+  --alero-terracota-deep: #a2583a;
+  --alero-terracota-soft: #f3ddd2;
+  --alero-salvia: #8fa894;
+  --alero-salvia-deep: #4f6b56;
+  --alero-salvia-soft: #e3eae4;
+}
+
+/* Títulos con la serif de la marca */
+h1,
+.doc-header__title,
+.collection-list__header h1,
+.dashboard__label,
+.login__brand + h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Botón principal en terracota profunda; el texto crema cumple contraste AA */
+.btn--style-primary {
+  --bg-color: var(--alero-terracota-deep);
+  --hover-bg: #8a4a30;
+  --color: var(--color-base-0);
+}
+
+/* Barra lateral y cabecera un tono más oscuras que el contenido */
+.nav {
+  background: var(--color-base-100);
+}
+.app-header {
+  background: var(--color-base-50);
+}
+
+/* Tarjetas del tablero */
+.card {
+  border-radius: var(--style-radius-l);
+  background: var(--color-base-0);
+}
+.card__title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* Tarjeta de bienvenida (componente propio) */
+.alero-welcome {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--alero-terracota);
+  border-radius: var(--style-radius-l);
+  background: var(--alero-terracota-soft);
+}
+.alero-welcome h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.alero-welcome p {
+  margin: 0;
+  color: var(--color-base-600);
+}
+.alero-welcome__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.alero-welcome__links a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--color-base-0);
+  color: var(--color-base-800);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--color-base-150);
+}
+.alero-welcome__links a:hover {
+  border-color: var(--alero-terracota-deep);
+  color: var(--alero-terracota-deep);
+}
+
+/* Logotipo */
+.alero-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-base-800);
+}
+.alero-logo__name {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
