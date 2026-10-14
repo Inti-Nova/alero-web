@@ -50,7 +50,7 @@ export default async function BilinguismoTempranoPage() {
         </ButtonLink>
       </PageHeader>
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="max-w-2xl">
           <Eyebrow>Lo que suelo escuchar</Eyebrow>
           <h2 className="text-3xl">Tres ideas que frenan a muchas familias</h2>

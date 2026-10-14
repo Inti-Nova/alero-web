@@ -26,7 +26,7 @@ export interface WizardService {
 
 const weekdays = ["L", "M", "X", "J", "V", "S", "D"];
 const inputClass =
-  "mt-1 w-full rounded-xl border border-linea bg-white/80 px-4 py-3 text-base placeholder:text-tinta-soft/70 focus-visible:border-terracota-deep";
+  "mt-1 w-full rounded-xl border border-linea bg-white px-4 py-3 text-base placeholder:text-tinta-soft/70 focus-visible:border-terracota-deep";
 
 function monthKey(date: Date) {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
@@ -181,7 +181,7 @@ export function BookingWizard({
             return (
               <label
                 key={s.slug}
-                className={`block cursor-pointer rounded-card border-2 bg-white/70 p-4 transition-colors ${
+                className={`block cursor-pointer rounded-card border-2 bg-crema-dark p-4 transition-colors ${
                   active ? accentRing(s.accent) : "border-linea hover:border-tinta/30"
                 }`}
               >
@@ -209,7 +209,7 @@ export function BookingWizard({
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <h2 className="mb-4 text-xl font-semibold">2. Elige el día</h2>
-            <div className="rounded-card border border-linea bg-white/70 p-4 sm:p-6">
+            <div className="rounded-card border border-linea bg-crema-dark p-4 sm:p-6">
               <div className="mb-4 flex items-center justify-between">
                 <button
                   type="button"
@@ -288,7 +288,7 @@ export function BookingWizard({
                       className={`w-full rounded-xl border-2 px-3 py-2 font-semibold transition-colors ${
                         selectedStart === iso
                           ? "border-tinta bg-tinta text-crema"
-                          : "border-linea bg-white/70 hover:border-tinta/40"
+                          : "border-linea bg-white hover:border-tinta/40"
                       }`}
                     >
                       {timeFormatter.format(new Date(iso))}
@@ -307,7 +307,7 @@ export function BookingWizard({
 
       {/* Paso 3 */}
       {service && selectedStart && (
-        <form action={formAction} noValidate className="max-w-2xl space-y-5 rounded-card border border-linea bg-white/70 p-6 sm:p-8">
+        <form action={formAction} noValidate className="max-w-2xl space-y-5 rounded-card border border-linea bg-crema-dark p-6 sm:p-8">
           <h2 className="text-xl font-semibold">4. Tus datos</h2>
           <p className="text-tinta-soft">
             {service.name} · {longFormatter.format(new Date(selectedStart))}

@@ -104,7 +104,7 @@ export function Card({
         ? "border-salvia/50"
         : "border-linea";
   return (
-    <div className={`rounded-card border bg-white/70 p-6 sm:p-8 ${border} ${className}`}>
+    <div className={`rounded-card border bg-crema-dark p-6 sm:p-8 ${border} ${className}`}>
       {children}
     </div>
   );

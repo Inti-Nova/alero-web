@@ -10,7 +10,7 @@ export async function SiteFooter() {
     <footer className="border-t border-linea bg-crema-dark">
       <div className="container-site grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="max-w-md space-y-4">
-          <p className="font-heading text-2xl font-semibold">{siteConfig.name}</p>
+          <p className="font-brand text-3xl leading-none">{siteConfig.name}</p>
           <p className="text-tinta-soft">{siteConfig.tagline}.</p>
           <Disclaimer compact />
         </div>

@@ -54,7 +54,7 @@ export default async function AdaptacionEscolarPage() {
         </ButtonLink>
       </PageHeader>
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow>¿Te suena?</Eyebrow>

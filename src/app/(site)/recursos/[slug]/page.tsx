@@ -62,7 +62,7 @@ export default async function PostPage({ params }: Props) {
           </div>
         )}
 
-        <Section tone="crema-dark">
+        <Section>
           <div className="rich-text max-w-3xl">
             <RichText data={post.content as unknown as SerializedEditorState} />
           </div>

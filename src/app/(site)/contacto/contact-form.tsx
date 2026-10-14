@@ -8,7 +8,7 @@ import { submitContact, type ContactFormState } from "./actions";
 const initialState: ContactFormState = { status: "idle" };
 
 const inputClass =
-  "mt-1 w-full rounded-xl border border-linea bg-white/80 px-4 py-3 text-base placeholder:text-tinta-soft/70 focus-visible:border-terracota-deep";
+  "mt-1 w-full rounded-xl border border-linea bg-white px-4 py-3 text-base placeholder:text-tinta-soft/70 focus-visible:border-terracota-deep";
 
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;

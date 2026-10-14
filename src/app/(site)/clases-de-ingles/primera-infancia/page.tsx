@@ -70,7 +70,7 @@ export default function PrimeraInfanciaPage() {
         </div>
       </Section>
 
-      <Section tone="crema-dark">
+      <Section>
         <p className="max-w-2xl text-tinta-soft">
           Si lo que buscas es orientación para apoyar el inglés tú en casa, sin clases para el niño,
           mira el acompañamiento en{" "}

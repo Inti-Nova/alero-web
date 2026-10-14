@@ -44,7 +44,7 @@ export default function SobreMiPage() {
     <>
       <PageHeader eyebrow="Sobre mí" title={siteConfig.ownerName} lead="Educadora bilingüe de primera infancia. Acompaño a familias con lo que aprendí en años de aula y en cómo aprende y se regula un niño pequeño." />
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-5 text-lg">
             <Eyebrow>Mi historia</Eyebrow>

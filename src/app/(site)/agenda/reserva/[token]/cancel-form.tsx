@@ -31,7 +31,7 @@ export function CancelForm({ token }: { token: string }) {
           id="reason"
           name="reason"
           maxLength={300}
-          className="mt-1 w-full rounded-xl border border-linea bg-white/80 px-4 py-3"
+          className="mt-1 w-full rounded-xl border border-linea bg-white px-4 py-3"
         />
       </div>
       <Button type="submit" variant="outline" disabled={pending}>

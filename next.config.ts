@@ -11,6 +11,8 @@ const mediaHost = (() => {
 })();
 
 const nextConfig: NextConfig = {
+  // Oculta el botón flotante de herramientas de Next en desarrollo (la "N" de la esquina).
+  devIndicators: false,
   turbopack: {
     // Evita que Next tome como raíz la carpeta de usuario por un package-lock.json ajeno.
     root: process.cwd(),

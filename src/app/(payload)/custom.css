@@ -3,26 +3,26 @@
  * sustituyen los grises neutros por la paleta de la marca
  * (arena #D6C2A0, ciruela #3D1746, naranja #D56631, salvia #8FA894).
  */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Satisfy&display=swap");
 
 :root {
-  /* Escala base: 0 casi blanco · 50 crema · 100 arena · 800 ciruela · 1000 casi negro */
-  --color-base-0: #fdf8ef;
-  --color-base-50: #ebd2ad;
-  --color-base-100: #d6c2a0;
-  --color-base-150: #cab598;
-  --color-base-200: #bea991;
-  --color-base-250: #b29c89;
-  --color-base-300: #a68f81;
-  --color-base-350: #9a837a;
-  --color-base-400: #8e7672;
-  --color-base-450: #826a6b;
-  --color-base-500: #765d63;
-  --color-base-550: #6a505b;
-  --color-base-600: #5e4454;
-  --color-base-650: #52374c;
-  --color-base-700: #462a44;
-  --color-base-750: #3a1e3d;
+  /* Escala base: 0 blanco · 50 fondo · 100 arena claro · 150 arena · 800 ciruela · 1000 casi negro */
+  --color-base-0: #ffffff;
+  --color-base-50: #fffdf9;
+  --color-base-100: #ebd2ad;
+  --color-base-150: #d6c2a0;
+  --color-base-200: #c9b498;
+  --color-base-250: #bca790;
+  --color-base-300: #af9987;
+  --color-base-350: #a28c7f;
+  --color-base-400: #957e77;
+  --color-base-450: #88706f;
+  --color-base-500: #7c6366;
+  --color-base-550: #6f555e;
+  --color-base-600: #624756;
+  --color-base-650: #553a4e;
+  --color-base-700: #482c45;
+  --color-base-750: #3b1f3d;
   --color-base-800: #2e1135;
   --color-base-850: #270e2c;
   --color-base-900: #200c24;
@@ -95,8 +95,9 @@
   --theme-bg: var(--color-base-50);
   --theme-input-bg: var(--color-base-0);
 
-  --font-body: "Nunito", "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Fraunces", "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-script: "Satisfy", "Brush Script MT", cursive;
 
   --style-radius-s: 8px;
   --style-radius-m: 12px;
@@ -136,10 +137,10 @@ h1,
   background: var(--color-base-50);
 }
 
-/* Tarjetas del tablero */
+/* Tarjetas del tablero en arena sobre el fondo claro */
 .card {
   border-radius: var(--style-radius-l);
-  background: var(--color-base-0);
+  background: var(--color-base-100);
 }
 .card__title {
   font-family: var(--font-serif);
@@ -189,7 +190,7 @@ h1,
   color: var(--alero-terracota-deep);
 }
 
-/* Logotipo */
+/* Logotipo: el nombre va en la cursiva de la marca */
 .alero-logo {
   display: inline-flex;
   align-items: center;
@@ -197,9 +198,8 @@ h1,
   color: var(--color-base-800);
 }
 .alero-logo__name {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-family: var(--font-script);
+  font-size: 2.25rem;
+  font-weight: 400;
   line-height: 1;
 }

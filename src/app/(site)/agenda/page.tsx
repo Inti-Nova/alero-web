@@ -32,7 +32,7 @@ export default async function AgendaPage({ searchParams }: Props) {
         lead="Elige el tipo de sesión, el día y la hora que mejor le sirva a tu familia. Recibirás un correo con los pasos para confirmar."
       />
 
-      <Section tone="crema-dark">
+      <Section>
         <BookingWizard
           services={services}
           initialServiceSlug={services.find((s) => s.slug === requested)?.slug ?? ""}

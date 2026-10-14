@@ -42,7 +42,7 @@ export default async function ReservaPage({ params }: Props) {
     <>
       <PageHeader eyebrow="Tu reserva" title={service?.name ?? "Sesión"} />
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="grid gap-8 lg:grid-cols-2">
           <Card>
             <Eyebrow>{bookingStatusLabels[status]}</Eyebrow>

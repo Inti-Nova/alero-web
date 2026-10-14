@@ -26,7 +26,7 @@ export default async function RecursosPage() {
         lead="Lo que voy compartiendo sobre adaptación escolar, bilingüismo temprano e inglés para niños, ampliado y ordenado para que lo encuentres cuando lo necesites."
       />
 
-      <Section tone="crema-dark">
+      <Section>
         {posts.length === 0 ? (
           <Card className="max-w-2xl">
             <h2 className="text-2xl">Estoy ordenando el contenido</h2>

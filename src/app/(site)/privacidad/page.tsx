@@ -27,7 +27,7 @@ export default async function PrivacidadPage() {
         lead={`Esta política explica qué datos recoge ${name}, para qué los usa y qué derechos tienes sobre ellos, con especial cuidado en los datos de niños y niñas.`}
       />
 
-      <Section tone="crema-dark">
+      <Section>
         <article className="max-w-3xl space-y-8">
           <p className="text-sm text-tinta-soft">Última actualización: {lastUpdated}</p>
 

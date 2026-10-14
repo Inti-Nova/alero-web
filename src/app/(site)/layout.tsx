@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { Fraunces, Nunito } from "next/font/google";
+import { Satisfy, Source_Serif_4 } from "next/font/google";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/config/site";
 import "../globals.css";
 
-const fraunces = Fraunces({
+/** Serif única para títulos y cuerpo, con eje óptico para que rinda en ambos tamaños. */
+const serif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  axes: ["opsz"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const nunito = Nunito({
+/** Cursiva tipo firma, solo para el nombre de la marca. */
+const script = Satisfy({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  weight: "400",
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${nunito.variable} h-full`}>
+    <html lang="es" className={`${serif.variable} ${script.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         <SiteHeader />
         <main id="contenido" className="flex-1">

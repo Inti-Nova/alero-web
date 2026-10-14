@@ -122,6 +122,9 @@ export function parsePath(d: string): Parsed {
   let subStart = { x: 0, y: 0 };
   let lastCtrl: Point | null = null;
   let lastCmd = "";
+  // Se lee a través de una función: lastCtrl se asigna dentro de los helpers y
+  // el análisis de flujo de TypeScript no lo ve, así que lo daría por null.
+  const controlPoint = (): Point | null => lastCtrl;
 
   const push = (seg: Segment) => {
     segments.push(seg);
@@ -209,9 +212,10 @@ export function parsePath(d: string): Parsed {
         }
         case "S": {
           const [x2, y2, x, y] = take(4);
+          const ctrl = controlPoint();
           const reflect =
-            lastCtrl && (lastCmd === "C" || lastCmd === "S")
-              ? { x: 2 * cur.x - lastCtrl.x, y: 2 * cur.y - lastCtrl.y }
+            ctrl && (lastCmd === "C" || lastCmd === "S")
+              ? { x: 2 * cur.x - ctrl.x, y: 2 * cur.y - ctrl.y }
               : cur;
           cubicTo(reflect.x, reflect.y, x2 + ox(), y2 + oy(), x + ox(), y + oy());
           break;
@@ -223,9 +227,10 @@ export function parsePath(d: string): Parsed {
         }
         case "T": {
           const [x, y] = take(2);
+          const ctrl = controlPoint();
           const reflect =
-            lastCtrl && (lastCmd === "Q" || lastCmd === "T")
-              ? { x: 2 * cur.x - lastCtrl.x, y: 2 * cur.y - lastCtrl.y }
+            ctrl && (lastCmd === "Q" || lastCmd === "T")
+              ? { x: 2 * cur.x - ctrl.x, y: 2 * cur.y - ctrl.y }
               : cur;
           quadTo(reflect.x, reflect.y, x + ox(), y + oy());
           break;

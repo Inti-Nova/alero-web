@@ -13,7 +13,7 @@ export function SiteHeader() {
         Saltar al contenido
       </a>
       <div className="container-site relative flex h-18 items-center justify-between gap-6">
-        <Link href="/" className="font-heading text-2xl font-semibold tracking-tight">
+        <Link href="/" className="font-brand text-3xl leading-none">
           {siteConfig.name}
         </Link>
 

@@ -39,7 +39,7 @@ export default async function PreciosPage() {
         </div>
       )}
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="grid gap-6 lg:grid-cols-3">
           {services.map((service) => (
             <Card key={service.slug} accent={service.accent} className="flex h-full flex-col">

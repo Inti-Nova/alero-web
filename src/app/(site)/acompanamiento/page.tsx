@@ -39,7 +39,7 @@ export default async function AcompanamientoPage() {
         <Disclaimer />
       </div>
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="max-w-2xl">
           <Eyebrow>Dos líneas de acompañamiento</Eyebrow>
           <h2 className="text-3xl sm:text-4xl">Elige el tema que te trae hoy</h2>

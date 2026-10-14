@@ -22,7 +22,7 @@ export default async function ContactoPage() {
         lead="Si no sabes qué servicio te sirve o prefieres hablar antes de agendar, este es el lugar. Te respondo con calma y sin compromiso."
       />
 
-      <Section tone="crema-dark">
+      <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr]">
           <Card>
             <ContactForm />
