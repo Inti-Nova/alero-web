@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-/** Marca gráfica: dos círculos solapados, terracota y salvia, como en la portada del sitio. */
+/** Marca gráfica: dos círculos solapados, naranja y salvia. */
 export function Mark({ size = 36 }: { size?: number }) {
   return (
     <svg
@@ -12,7 +12,7 @@ export function Mark({ size = 36 }: { size?: number }) {
       aria-hidden
       focusable="false"
     >
-      <circle cx="15" cy="17" r="13" fill="#d98b6b" />
+      <circle cx="15" cy="17" r="13" fill="#d56631" />
       <circle cx="25" cy="24" r="12" fill="#8fa894" fillOpacity="0.9" />
     </svg>
   );

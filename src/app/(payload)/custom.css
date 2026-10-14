@@ -1,75 +1,75 @@
 /* Tema del panel de administración de Alero.
  * Payload construye toda su interfaz a partir de estas escalas; aquí se
- * sustituyen los grises neutros por la paleta cálida de la marca
- * (crema #F7F1E8, tinta #3A2E26, terracota #D98B6B, salvia #8FA894).
+ * sustituyen los grises neutros por la paleta de la marca
+ * (arena #D6C2A0, ciruela #3D1746, naranja #D56631, salvia #8FA894).
  */
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap");
 
 :root {
-  /* Escala base: 0 casi blanco · 50 crema · 800 tinta · 1000 casi negro */
-  --color-base-0: #fffdf9;
-  --color-base-50: #f7f1e8;
-  --color-base-100: #efe6d8;
-  --color-base-150: #e4d9ca;
-  --color-base-200: #d1cac1;
-  --color-base-250: #c5bdb4;
-  --color-base-300: #b8b0a7;
-  --color-base-350: #aba39a;
-  --color-base-400: #9f968d;
-  --color-base-450: #928981;
-  --color-base-500: #867c74;
-  --color-base-550: #796f67;
-  --color-base-600: #6b5e54;
-  --color-base-650: #60554d;
-  --color-base-700: #534840;
-  --color-base-750: #473b33;
-  --color-base-800: #3a2e26;
-  --color-base-850: #30261f;
-  --color-base-900: #261e18;
-  --color-base-950: #1c1612;
-  --color-base-1000: #120e0b;
+  /* Escala base: 0 casi blanco · 50 crema · 100 arena · 800 ciruela · 1000 casi negro */
+  --color-base-0: #fdf8ef;
+  --color-base-50: #ebd2ad;
+  --color-base-100: #d6c2a0;
+  --color-base-150: #cab598;
+  --color-base-200: #bea991;
+  --color-base-250: #b29c89;
+  --color-base-300: #a68f81;
+  --color-base-350: #9a837a;
+  --color-base-400: #8e7672;
+  --color-base-450: #826a6b;
+  --color-base-500: #765d63;
+  --color-base-550: #6a505b;
+  --color-base-600: #5e4454;
+  --color-base-650: #52374c;
+  --color-base-700: #462a44;
+  --color-base-750: #3a1e3d;
+  --color-base-800: #2e1135;
+  --color-base-850: #270e2c;
+  --color-base-900: #200c24;
+  --color-base-950: #19091b;
+  --color-base-1000: #120612;
 
   /* Éxito: salvia */
-  --color-success-50: #dee1da;
-  --color-success-100: #ced4cb;
-  --color-success-150: #bec7bd;
-  --color-success-200: #aebaae;
-  --color-success-250: #9ead9f;
-  --color-success-300: #8ea091;
-  --color-success-350: #7f9282;
-  --color-success-400: #6f8573;
-  --color-success-450: #5f7865;
-  --color-success-500: #4f6b56;
-  --color-success-550: #4d6652;
-  --color-success-600: #4b614e;
-  --color-success-650: #4a5b4a;
-  --color-success-700: #485646;
-  --color-success-750: #465142;
-  --color-success-800: #444c3e;
-  --color-success-850: #434739;
-  --color-success-900: #414235;
-  --color-success-950: #3f3c31;
+  --color-success-50: #e1e7d9;
+  --color-success-100: #d0dbcb;
+  --color-success-150: #bfcdbd;
+  --color-success-200: #aebfaf;
+  --color-success-250: #9db1a1;
+  --color-success-300: #8ca393;
+  --color-success-350: #7b9585;
+  --color-success-400: #6a8777;
+  --color-success-450: #597969;
+  --color-success-500: #49624f;
+  --color-success-550: #445c4a;
+  --color-success-600: #3f5645;
+  --color-success-650: #3a4f3f;
+  --color-success-700: #35493a;
+  --color-success-750: #304335;
+  --color-success-800: #2b3d30;
+  --color-success-850: #26362a;
+  --color-success-900: #213025;
+  --color-success-950: #1c2a20;
 
-  /* Aviso: terracota */
-  --color-warning-50: #edded5;
-  --color-warning-100: #e5cfc4;
-  --color-warning-150: #ddc0b2;
-  --color-warning-200: #d4b1a1;
-  --color-warning-250: #cca290;
-  --color-warning-300: #c3937f;
-  --color-warning-350: #bb856e;
-  --color-warning-400: #b3765c;
-  --color-warning-450: #aa674b;
-  --color-warning-500: #a2583a;
-  --color-warning-550: #995438;
-  --color-warning-600: #905137;
-  --color-warning-650: #874d35;
-  --color-warning-700: #7f4a33;
-  --color-warning-750: #764632;
-  --color-warning-800: #6d4330;
-  --color-warning-850: #643f2e;
-  --color-warning-900: #5b3b2c;
-  --color-warning-950: #52382b;
+  /* Aviso: naranja */
+  --color-warning-50: #f1c8a5;
+  --color-warning-100: #e6b996;
+  --color-warning-150: #dbaa87;
+  --color-warning-200: #d09c79;
+  --color-warning-250: #c58d6a;
+  --color-warning-300: #b97e5b;
+  --color-warning-350: #ae6f4c;
+  --color-warning-400: #a3613e;
+  --color-warning-450: #98522f;
+  --color-warning-500: #8d4320;
+  --color-warning-550: #843e1d;
+  --color-warning-600: #7b391a;
+  --color-warning-650: #713318;
+  --color-warning-700: #682e15;
+  --color-warning-750: #5f2912;
+  --color-warning-800: #56240f;
+  --color-warning-850: #4c1e0d;
+  --color-warning-900: #43190a;
+  --color-warning-950: #3a1407;
 
   /* Error: rojo cálido */
   --color-error-50: #f1dad5;
@@ -102,12 +102,12 @@
   --style-radius-m: 12px;
   --style-radius-l: 20px;
 
-  --alero-terracota: #d98b6b;
-  --alero-terracota-deep: #a2583a;
-  --alero-terracota-soft: #f3ddd2;
+  --alero-terracota: #d56631;
+  --alero-terracota-deep: #8d4320;
+  --alero-terracota-soft: #f1c8a5;
   --alero-salvia: #8fa894;
-  --alero-salvia-deep: #4f6b56;
-  --alero-salvia-soft: #e3eae4;
+  --alero-salvia-deep: #49624f;
+  --alero-salvia-soft: #e1e7d9;
 }
 
 /* Títulos con la serif de la marca */
@@ -121,10 +121,10 @@ h1,
   letter-spacing: -0.01em;
 }
 
-/* Botón principal en terracota profunda; el texto crema cumple contraste AA */
+/* Botón principal en naranja profundo; el texto crema cumple contraste AA */
 .btn--style-primary {
   --bg-color: var(--alero-terracota-deep);
-  --hover-bg: #8a4a30;
+  --hover-bg: #713318;
   --color: var(--color-base-0);
 }
 

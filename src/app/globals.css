@@ -1,23 +1,29 @@
 @import "tailwindcss";
 
 /*
- * Tokens de diseño (sección 4 del brief).
- * Los acentos originales (#D98B6B, #8FA894) no alcanzan contraste AA con texto
- * blanco ni como texto sobre crema, por eso existen las variantes "deep" para
- * texto y enlaces, y los botones de acento usan texto tinta.
+ * Tokens de diseño. Paleta definida el 2026-10-14 a partir de la referencia
+ * Pantone: arena P 15-2 C (#d6c2a0), ciruela P 95-16 C (#3d1746) y naranja
+ * P 30-8 C (#d56631). Del brief original solo se conserva el verde salvia.
+ *
+ * Los nombres de los tokens describen su papel, no el tono exacto:
+ * crema = fondo (tinte claro del arena, como el cartel de referencia),
+ * tinta = texto (el ciruela, un punto más oscuro para dar 4.5:1 sobre el
+ * naranja de los botones), terracota = acento cálido (el naranja).
+ * Los acentos puros no alcanzan AA como texto sobre crema, por eso existen
+ * las variantes "deep" para texto y enlaces.
  */
 @theme {
-  --color-crema: #f7f1e8;
-  --color-crema-dark: #efe6d8;
-  --color-tinta: #3a2e26;
-  --color-tinta-soft: #6b5e54;
-  --color-terracota: #d98b6b;
-  --color-terracota-deep: #a2583a;
-  --color-terracota-soft: #f3ddd2;
+  --color-crema: #ebd2ad;
+  --color-crema-dark: #d6c2a0;
+  --color-tinta: #2e1135;
+  --color-tinta-soft: #5e3f66;
+  --color-terracota: #d56631;
+  --color-terracota-deep: #8d4320;
+  --color-terracota-soft: #f1c8a5;
   --color-salvia: #8fa894;
-  --color-salvia-deep: #4f6b56;
-  --color-salvia-soft: #e3eae4;
-  --color-linea: #e4d9ca;
+  --color-salvia-deep: #49624f;
+  --color-salvia-soft: #e1e7d9;
+  --color-linea: #c9ad80;
 
   --radius-card: 1.25rem;
 }

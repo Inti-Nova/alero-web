@@ -40,7 +40,7 @@ export async function sendBookingReceivedEmails(
       `<p>Gracias por reservar. Estos son los datos de tu sesión:</p>${summary}
        <p>${escapeHtml(data.instructions).replaceAll("\n", "<br>")}</p>
        ${manageLink(data.manageToken)}
-       <p style="margin-top:24px;color:#6b5e54;font-size:14px">${escapeHtml(siteConfig.disclaimer)}</p>`,
+       <p style="margin-top:24px;color:#5e3f66;font-size:14px">${escapeHtml(siteConfig.disclaimer)}</p>`,
     ),
   });
 

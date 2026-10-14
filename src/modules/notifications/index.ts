@@ -50,7 +50,7 @@ export async function sendEmail(input: EmailInput) {
 /** Plantilla mínima con los colores de la marca. */
 export function emailLayout(title: string, body: string) {
   return `<!doctype html>
-<html lang="es"><body style="margin:0;background:#f7f1e8;font-family:Nunito,Arial,sans-serif;color:#3a2e26">
+<html lang="es"><body style="margin:0;background:#ebd2ad;font-family:Nunito,Arial,sans-serif;color:#2e1135">
   <div style="max-width:560px;margin:0 auto;padding:32px 20px">
     <h1 style="font-family:Georgia,serif;font-size:24px;margin:0 0 16px">${escapeHtml(title)}</h1>
     <div style="font-size:16px;line-height:1.6">${body}</div>
