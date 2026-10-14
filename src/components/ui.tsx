@@ -58,7 +58,7 @@ export function Section({
   };
   return (
     <section id={id} className={`${tones[tone]} py-16 sm:py-20 ${className}`}>
-      <div className="container-site">{children}</div>
+      <div className="container-site relative z-10">{children}</div>
     </section>
   );
 }
