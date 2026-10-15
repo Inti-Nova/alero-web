@@ -86,17 +86,17 @@ export default async function HomePage() {
     <div data-line-root className="container-site relative">
       <ScrollLine />
 
-      <div className="grid gap-y-12 py-10 sm:py-14 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-16 lg:py-16">
+      <div className="grid gap-y-10 py-6 sm:py-8 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-12 lg:py-10">
         <Row figure="family" size={250} side="right" start>
           <Eyebrow>Acompañamiento educativo e inglés para niños</Eyebrow>
-          <h1 className="text-4xl sm:text-5xl">
+          <h1 className="text-3xl sm:text-4xl">
             Estrategias concretas para que tu hijo se adapte al colegio y crezca con el inglés.
           </h1>
-          <p className="mt-5 text-xl text-tinta-soft">
+          <p className="mt-5 text-lg text-tinta-soft">
             Soy educadora bilingüe de primera infancia. Acompaño a padres y madres con orientación
             práctica, y doy clases de inglés uno a uno pensadas para cada etapa.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-3">
             <ButtonLink href="/agenda">Agendar una sesión</ButtonLink>
             <ButtonLink href="#servicios" variant="outline">
               Ver los servicios
@@ -110,14 +110,14 @@ export default async function HomePage() {
         <Row figure="book" size={200} side="left">
           <div id="servicios" className="scroll-mt-28">
             <Eyebrow>Dos caminos, una misma mirada</Eyebrow>
-            <h2 className="text-3xl sm:text-4xl">¿Qué estás buscando hoy?</h2>
-            <p className="mt-4 text-lg text-tinta-soft">
+            <h2 className="text-2xl sm:text-3xl">¿Qué estás buscando hoy?</h2>
+            <p className="mt-4 text-tinta-soft">
               Trabajo en dos líneas distintas. Elige la que se parece a lo que necesita tu familia.
             </p>
           </div>
-          <Card accent="terracota" className="mt-6 flex flex-col">
+          <Card accent="terracota" className="mt-5 flex flex-col">
             <Eyebrow accent="terracota">Para padres y madres</Eyebrow>
-            <h3 className="text-2xl">Acompañamiento educativo</h3>
+            <h3 className="text-xl">Acompañamiento educativo</h3>
             <p className="mt-3">
               Orientación práctica en dos temas: la adaptación al colegio en niños de 2 a 6 años, y
               cómo apoyar el inglés en casa desde la primera infancia. Paquetes cortos de sesiones,
@@ -134,7 +134,7 @@ export default async function HomePage() {
         <Row figure="person-speech" size={270} side="right">
           <Card accent="salvia" className="flex flex-col">
             <Eyebrow accent="salvia">Para niños y niñas</Eyebrow>
-            <h3 className="text-2xl">Clases de inglés personalizadas</h3>
+            <h3 className="text-xl">Clases de inglés personalizadas</h3>
             <p className="mt-3">
               Clases uno a uno por videollamada. En los primeros años, juego, movimiento y canciones.
               Con niños mayores, varias formas de aprender y de mostrar lo aprendido, aprovechando la
@@ -148,11 +148,11 @@ export default async function HomePage() {
 
         <Row figure="hands-plant" size={250} side="left">
           <Eyebrow>Cómo trabajamos</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl">Sin teoría suelta. Con pasos para esta semana.</h2>
-          <ol className="mt-6 space-y-6">
+          <h2 className="text-2xl sm:text-3xl">Sin teoría suelta. Con pasos para esta semana.</h2>
+          <ol className="mt-5 space-y-4">
             {steps.map((step, i) => (
               <li key={step.title} className="grid grid-cols-[auto_1fr] gap-x-6">
-                <span className="font-heading text-5xl leading-none text-terracota-deep">
+                <span className="font-heading text-4xl leading-none text-terracota-deep">
                   0{i + 1}
                 </span>
                 <div>
@@ -166,12 +166,12 @@ export default async function HomePage() {
 
         <Row figure="frame" size={300} side="right">
           <Eyebrow accent="salvia">Quién te acompaña</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl">{siteConfig.ownerName}</h2>
+          <h2 className="text-2xl sm:text-3xl">{siteConfig.ownerName}</h2>
           <p className="mt-4 text-lg">
             Educadora bilingüe de primera infancia, con experiencia de aula en metodologías CLIL y
             TPR, y especialización en curso en Psicología Educativa.
           </p>
-          <blockquote className="mt-6 rounded-card border border-salvia/50 bg-salvia-soft/60 p-6 text-lg">
+          <blockquote className="mt-5 rounded-card border border-salvia/50 bg-salvia-soft/60 p-6 text-lg">
             <p>
               “No soy psicóloga, soy educadora con formación en psicología educativa. Mi trabajo no
               es tratar, es acompañar: doy estrategias concretas basadas en años de aula y en cómo
@@ -180,7 +180,7 @@ export default async function HomePage() {
           </blockquote>
           <Link
             href="/sobre-mi"
-            className="mt-6 inline-block font-bold text-salvia-deep underline-offset-4 hover:underline"
+            className="mt-5 inline-block font-bold text-salvia-deep underline-offset-4 hover:underline"
           >
             Leer mi historia y mi metodología →
           </Link>
@@ -191,11 +191,11 @@ export default async function HomePage() {
 
         <div data-line-text className="relative z-10 lg:col-span-2">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl sm:text-4xl">¿Hablamos de lo que necesita tu familia?</h2>
-            <p className="mt-4 text-lg text-tinta-soft">
+            <h2 className="text-2xl sm:text-3xl">¿Hablamos de lo que necesita tu familia?</h2>
+            <p className="mt-4 text-tinta-soft">
               Agenda una sesión o escríbeme por WhatsApp. Te respondo con calma y sin compromiso.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
               <ButtonLink href="/agenda">Agendar una sesión</ButtonLink>
               {whatsappUrl ? (
                 <ButtonLink href={whatsappUrl} variant="outline" target="_blank" rel="noopener">

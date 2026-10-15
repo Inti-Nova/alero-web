@@ -32,7 +32,7 @@ export default async function PrivacidadPage() {
           <p className="text-sm text-tinta-soft">Última actualización: {lastUpdated}</p>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">1. Quién es responsable del tratamiento</h2>
+            <h2 className="text-xl">1. Quién es responsable del tratamiento</h2>
             <p>
               La responsable del tratamiento de los datos personales recogidos en este sitio es{" "}
               {ownerName}, quien presta los servicios bajo la marca {name}. Puedes escribirle{" "}
@@ -45,7 +45,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">2. Qué datos recogemos</h2>
+            <h2 className="text-xl">2. Qué datos recogemos</h2>
             <ul className="list-disc space-y-2 pl-6">
               <li>
                 <strong>Del adulto que contacta o agenda:</strong> nombre, correo electrónico,
@@ -69,7 +69,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">3. Datos de niños y niñas</h2>
+            <h2 className="text-xl">3. Datos de niños y niñas</h2>
             <p>
               Los servicios están dirigidos a padres, madres y adultos responsables. Solo tratamos
               datos de menores de edad cuando el adulto responsable los entrega de forma voluntaria
@@ -85,7 +85,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">4. Para qué usamos los datos</h2>
+            <h2 className="text-xl">4. Para qué usamos los datos</h2>
             <ul className="list-disc space-y-2 pl-6">
               <li>Responder tus mensajes y coordinar sesiones o clases.</li>
               <li>Preparar y prestar el servicio contratado.</li>
@@ -99,7 +99,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">5. Con quién se comparten</h2>
+            <h2 className="text-xl">5. Con quién se comparten</h2>
             <p>
               Usamos proveedores que tratan datos por nuestra cuenta y bajo sus propias políticas de
               privacidad: el proveedor de alojamiento y base de datos del sitio, el servicio de
@@ -111,7 +111,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">6. Cuánto tiempo los conservamos</h2>
+            <h2 className="text-xl">6. Cuánto tiempo los conservamos</h2>
             <p>
               Conservamos los datos mientras dure la relación con la familia y, después, durante el
               tiempo necesario para atender obligaciones legales o contables. Las notas de las
@@ -121,7 +121,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">7. Tus derechos</h2>
+            <h2 className="text-xl">7. Tus derechos</h2>
             <p>Como titular de los datos, y como representante de tu hijo o hija, puedes:</p>
             <ul className="list-disc space-y-2 pl-6">
               <li>Conocer, actualizar y rectificar tus datos y los del menor.</li>
@@ -136,7 +136,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">8. Seguridad</h2>
+            <h2 className="text-xl">8. Seguridad</h2>
             <p>
               Aplicamos medidas razonables para proteger la información: acceso restringido a la
               responsable, cuentas con verificación en dos pasos y proveedores con cifrado en
@@ -146,7 +146,7 @@ export default async function PrivacidadPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-2xl">9. Cambios en esta política</h2>
+            <h2 className="text-xl">9. Cambios en esta política</h2>
             <p>
               Si esta política cambia, publicaremos la versión actualizada en esta misma página con
               la nueva fecha de revisión.

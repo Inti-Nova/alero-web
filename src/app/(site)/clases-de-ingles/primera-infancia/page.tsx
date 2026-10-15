@@ -35,9 +35,9 @@ export default function PrimeraInfanciaPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow accent="salvia">La metodología, en concreto</Eyebrow>
-            <h2 className="text-3xl">Qué significan TPR y CLIL en una clase con un niño de cuatro años</h2>
+            <h2 className="text-2xl">Qué significan TPR y CLIL en una clase con un niño de cuatro años</h2>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-4">
             <Card accent="salvia">
               <h3 className="text-xl">TPR · Respuesta Física Total</h3>
               <p className="mt-2 text-tinta-soft">
@@ -60,7 +60,7 @@ export default function PrimeraInfanciaPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow accent="salvia">Cómo se ve una clase</Eyebrow>
-            <h2 className="text-3xl">Treinta minutos que se sienten como juego</h2>
+            <h2 className="text-2xl">Treinta minutos que se sienten como juego</h2>
             <p className="mt-4 text-tinta-soft">
               La duración se ajusta a la edad y a la atención de cada niño. La constancia pesa más
               que la longitud de la clase.

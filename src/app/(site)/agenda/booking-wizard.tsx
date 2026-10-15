@@ -137,10 +137,10 @@ export function BookingWizard({
   if (state.status === "success" && state.booking) {
     const b = state.booking;
     return (
-      <div role="status" className="max-w-2xl rounded-card border border-salvia/50 bg-salvia-soft p-6 sm:p-8">
+      <div role="status" className="max-w-2xl rounded-card border border-salvia/50 bg-salvia-soft p-5 sm:p-6">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-salvia-deep">Reserva recibida</p>
         <h2 className="mt-2 text-3xl">Gracias. Ya tenemos tu horario apartado.</h2>
-        <dl className="mt-6 space-y-2">
+        <dl className="mt-5 space-y-2">
           <div>
             <dt className="font-bold">Sesión</dt>
             <dd>{b.serviceName}</dd>
@@ -153,11 +153,11 @@ export function BookingWizard({
             </dd>
           </div>
         </dl>
-        <div className="mt-6 rounded-xl bg-crema p-4">
+        <div className="mt-5 rounded-xl bg-crema p-4">
           <p className="font-bold">Siguiente paso</p>
           <p className="mt-1 whitespace-pre-line">{b.instructions}</p>
         </div>
-        <p className="mt-6 text-sm text-tinta-soft">
+        <p className="mt-5 text-sm text-tinta-soft">
           Te enviamos estos datos por correo. Si necesitas cancelar o cambiar la fecha, usa{" "}
           <Link href={`/agenda/reserva/${b.manageToken}`} className="font-bold text-terracota-deep underline-offset-4 hover:underline">
             este enlace
@@ -206,7 +206,7 @@ export function BookingWizard({
 
       {/* Paso 2 */}
       {service && (
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <h2 className="mb-4 text-xl font-semibold">2. Elige el día</h2>
             <div className="rounded-card border border-linea bg-crema-dark p-4 sm:p-6">
@@ -307,7 +307,7 @@ export function BookingWizard({
 
       {/* Paso 3 */}
       {service && selectedStart && (
-        <form action={formAction} noValidate className="max-w-2xl space-y-5 rounded-card border border-linea bg-crema-dark p-6 sm:p-8">
+        <form action={formAction} noValidate className="max-w-2xl space-y-5 rounded-card border border-linea bg-crema-dark p-5 sm:p-6">
           <h2 className="text-xl font-semibold">4. Tus datos</h2>
           <p className="text-tinta-soft">
             {service.name} · {longFormatter.format(new Date(selectedStart))}

@@ -64,7 +64,7 @@ export default function SobreMiPage() {
             </p>
           </div>
           <Card>
-            <h2 className="text-2xl">Formación y experiencia</h2>
+            <h2 className="text-xl">Formación y experiencia</h2>
             <ul className="mt-4 space-y-3">
               {training.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -87,7 +87,7 @@ export default function SobreMiPage() {
               aprende y se regula un niño pequeño.”
             </p>
           </blockquote>
-          <p className="mt-6 text-tinta-soft">
+          <p className="mt-5 text-tinta-soft">
             Si en algún momento veo que lo que necesita tu familia es una evaluación o un
             tratamiento, te lo digo y te oriento sobre a quién acudir.
           </p>
@@ -97,7 +97,7 @@ export default function SobreMiPage() {
       <Section tone="salvia-soft">
         <div className="max-w-2xl">
           <Eyebrow accent="salvia">Metodología</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl">Cuatro ideas que están detrás de todo lo que hago</h2>
+          <h2 className="text-2xl sm:text-3xl">Cuatro ideas que están detrás de todo lo que hago</h2>
           <p className="mt-4 text-tinta-soft">
             Explicadas como las aplico, no como términos sueltos.
           </p>

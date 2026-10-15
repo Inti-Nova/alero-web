@@ -7,17 +7,17 @@ export async function SiteFooter() {
   const contact = await getContactLinks();
 
   return (
-    <footer className="border-t border-linea bg-crema-dark">
-      <div className="container-site grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
-        <div className="max-w-md space-y-4">
-          <p className="font-brand text-3xl leading-none">{siteConfig.name}</p>
+    <footer className="border-t border-linea bg-crema-dark text-sm">
+      <div className="container-site grid gap-6 py-8 md:grid-cols-[1.2fr_1.3fr_0.9fr]">
+        <div className="max-w-sm space-y-2">
+          <p className="font-brand text-2xl leading-none">{siteConfig.name}</p>
           <p className="text-tinta-soft">{siteConfig.tagline}.</p>
           <Disclaimer compact />
         </div>
 
         <nav aria-label="Mapa del sitio">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-tinta-soft">Sitio</p>
-          <ul className="space-y-2">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-tinta-soft">Sitio</p>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-1">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="hover:underline">
@@ -39,10 +39,10 @@ export async function SiteFooter() {
         </nav>
 
         <div>
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-tinta-soft">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-tinta-soft">
             Contacto
           </p>
-          <ul className="space-y-2">
+          <ul className="space-y-1">
             {contact.whatsappUrl && (
               <li>
                 <a href={contact.whatsappUrl} target="_blank" rel="noopener" className="hover:underline">
@@ -73,7 +73,7 @@ export async function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-linea">
-        <p className="container-site py-5 text-sm text-tinta-soft">
+        <p className="container-site py-3 text-xs text-tinta-soft">
           © {siteConfig.copyrightYear} {siteConfig.name} · {siteConfig.ownerName}. Todos los derechos
           reservados.
         </p>

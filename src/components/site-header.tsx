@@ -12,8 +12,8 @@ export function SiteHeader() {
       >
         Saltar al contenido
       </a>
-      <div className="container-site relative flex h-18 items-center justify-between gap-6">
-        <Link href="/" className="font-brand text-3xl leading-none">
+      <div className="container-site relative flex h-16 items-center justify-between gap-6">
+        <Link href="/" className="font-brand text-2xl leading-none">
           {siteConfig.name}
         </Link>
 
@@ -23,7 +23,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="rounded-full px-3 py-2 font-semibold text-tinta-soft transition-colors hover:bg-crema-dark hover:text-tinta"
+                  className="rounded-full px-3 py-1.5 text-sm font-semibold text-tinta-soft transition-colors hover:bg-crema-dark hover:text-tinta"
                 >
                   {item.label}
                 </Link>

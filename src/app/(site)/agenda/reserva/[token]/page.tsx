@@ -43,7 +43,7 @@ export default async function ReservaPage({ params }: Props) {
       <PageHeader eyebrow="Tu reserva" title={service?.name ?? "Sesión"} />
 
       <Section>
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           <Card>
             <Eyebrow>{bookingStatusLabels[status]}</Eyebrow>
             <dl className="space-y-3">
@@ -72,18 +72,18 @@ export default async function ReservaPage({ params }: Props) {
           <Card>
             {canCancel ? (
               <>
-                <h2 className="text-2xl">¿Necesitas cambiar la fecha?</h2>
+                <h2 className="text-xl">¿Necesitas cambiar la fecha?</h2>
                 <p className="mt-2 text-tinta-soft">
                   Cancela esta reserva y agenda un nuevo horario. Si prefieres, escríbenos y lo
                   movemos por ti.
                 </p>
-                <div className="mt-6">
+                <div className="mt-5">
                   <CancelForm token={token} />
                 </div>
               </>
             ) : (
               <>
-                <h2 className="text-2xl">Esta reserva no se puede modificar desde aquí</h2>
+                <h2 className="text-xl">Esta reserva no se puede modificar desde aquí</h2>
                 <p className="mt-2 text-tinta-soft">
                   {status === "cancelled"
                     ? "Fue cancelada. Puedes agendar un nuevo horario cuando quieras."
@@ -91,7 +91,7 @@ export default async function ReservaPage({ params }: Props) {
                 </p>
               </>
             )}
-            <ButtonLink href="/agenda" className="mt-6">
+            <ButtonLink href="/agenda" className="mt-5">
               Agendar un nuevo horario
             </ButtonLink>
           </Card>

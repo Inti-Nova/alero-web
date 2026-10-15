@@ -29,13 +29,13 @@ export default async function RecursosPage() {
       <Section>
         {posts.length === 0 ? (
           <Card className="max-w-2xl">
-            <h2 className="text-2xl">Estoy ordenando el contenido</h2>
+            <h2 className="text-xl">Estoy ordenando el contenido</h2>
             <p className="mt-3 text-tinta-soft">
               Muy pronto encontrarás aquí las guías que he publicado en Instagram, ampliadas.
               Mientras tanto puedes verlas allá.
             </p>
             {instagramUrl && (
-              <ButtonLink href={instagramUrl} variant="outline" className="mt-6" target="_blank" rel="noopener">
+              <ButtonLink href={instagramUrl} variant="outline" className="mt-5" target="_blank" rel="noopener">
                 Ver en Instagram
               </ButtonLink>
             )}

@@ -44,10 +44,10 @@ export default async function PreciosPage() {
           {services.map((service) => (
             <Card key={service.slug} accent={service.accent} className="flex h-full flex-col">
               <Eyebrow accent={service.accent}>{service.shortName}</Eyebrow>
-              <h2 className="text-2xl">{service.name}</h2>
+              <h2 className="text-xl">{service.name}</h2>
               <p className="mt-1 text-sm font-semibold text-tinta-soft">{service.audience}</p>
 
-              <p className="mt-6 font-heading text-3xl">
+              <p className="mt-5 font-heading text-3xl">
                 {service.priceCop !== null ? formatCop(service.priceCop) : "Precio de lanzamiento"}
               </p>
               <p className="text-sm text-tinta-soft">
@@ -58,7 +58,7 @@ export default async function PreciosPage() {
                   : "por confirmar"}
               </p>
 
-              <dl className="mt-6 space-y-2 text-sm">
+              <dl className="mt-5 space-y-2 text-sm">
                 <div>
                   <dt className="font-bold">Sesiones</dt>
                   <dd className="text-tinta-soft">{service.sessions}</dd>
@@ -69,11 +69,11 @@ export default async function PreciosPage() {
                 </div>
               </dl>
 
-              <div className="mt-6 flex-1">
+              <div className="mt-5 flex-1">
                 <CheckList items={service.includes} accent={service.accent} />
               </div>
 
-              <ButtonLink href={`/agenda?servicio=${service.slug}`} variant={service.accent} className="mt-8">
+              <ButtonLink href={`/agenda?servicio=${service.slug}`} variant={service.accent} className="mt-6">
                 Agendar
               </ButtonLink>
             </Card>
@@ -86,7 +86,7 @@ export default async function PreciosPage() {
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <Eyebrow>Formas de pago</Eyebrow>
-              <h2 className="text-3xl">Sencillo y sin plataformas raras</h2>
+              <h2 className="text-2xl">Sencillo y sin plataformas raras</h2>
             </div>
             <CheckList items={payment} />
           </div>

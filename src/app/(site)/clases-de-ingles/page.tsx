@@ -54,13 +54,13 @@ export default async function ClasesDeInglesPage() {
       <Section tone="salvia-soft">
         <div className="max-w-2xl">
           <Eyebrow accent="salvia">Una clase distinta para cada etapa</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl">¿Qué edad tiene tu hijo o hija?</h2>
+          <h2 className="text-2xl sm:text-3xl">¿Qué edad tiene tu hijo o hija?</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {stages.map((stage) => (
             <Card key={stage.href} accent="salvia" className="flex flex-col">
               <Eyebrow accent="salvia">{stage.eyebrow}</Eyebrow>
-              <h3 className="text-2xl sm:text-3xl">{stage.title}</h3>
+              <h3 className="text-xl sm:text-2xl">{stage.title}</h3>
               <p className="mt-4 flex-1">{stage.text}</p>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {stage.tags.map((tag) => (
@@ -74,7 +74,7 @@ export default async function ClasesDeInglesPage() {
               </ul>
               <Link
                 href={stage.href}
-                className="mt-6 inline-flex items-center gap-2 font-bold text-salvia-deep underline-offset-4 hover:underline"
+                className="mt-5 inline-flex items-center gap-2 font-bold text-salvia-deep underline-offset-4 hover:underline"
               >
                 Cómo son las clases <span aria-hidden>→</span>
               </Link>
@@ -87,14 +87,14 @@ export default async function ClasesDeInglesPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow accent="salvia">Cómo funcionan</Eyebrow>
-            <h2 className="text-3xl">{service.sessions}</h2>
+            <h2 className="text-2xl">{service.sessions}</h2>
             <p className="mt-4 text-tinta-soft">
               {service.format}. Empezamos con una clase inicial para conocernos y definir el plan.
               Después acordamos la frecuencia que le sirva a la familia.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl">Qué incluye</h3>
+            <h3 className="text-xl">Qué incluye</h3>
             <div className="mt-4">
               <CheckList items={service.includes} accent="salvia" />
             </div>

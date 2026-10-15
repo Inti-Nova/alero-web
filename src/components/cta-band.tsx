@@ -18,8 +18,8 @@ export async function CtaBand({
     <Section tone={accent === "terracota" ? "terracota-soft" : "salvia-soft"}>
       <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">
-          <h2 className="text-3xl">{title}</h2>
-          <p className="mt-3 text-lg text-tinta-soft">{text}</p>
+          <h2 className="text-2xl">{title}</h2>
+          <p className="mt-3 text-tinta-soft">{text}</p>
         </div>
         <div className="flex flex-wrap gap-3">
           <ButtonLink href={agendaHref} variant={accent}>

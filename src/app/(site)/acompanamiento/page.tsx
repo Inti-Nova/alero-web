@@ -42,7 +42,7 @@ export default async function AcompanamientoPage() {
       <Section>
         <div className="max-w-2xl">
           <Eyebrow>Dos líneas de acompañamiento</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl">Elige el tema que te trae hoy</h2>
+          <h2 className="text-2xl sm:text-3xl">Elige el tema que te trae hoy</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {lines.map((service) => (
@@ -54,7 +54,7 @@ export default async function AcompanamientoPage() {
       <Section>
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
-            <h2 className="text-2xl">Es para ti si…</h2>
+            <h2 className="text-xl">Es para ti si…</h2>
             <ul className="mt-4 space-y-3">
               {forWhom.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -65,7 +65,7 @@ export default async function AcompanamientoPage() {
             </ul>
           </Card>
           <Card>
-            <h2 className="text-2xl">No es lo que necesitas si…</h2>
+            <h2 className="text-xl">No es lo que necesitas si…</h2>
             <ul className="mt-4 space-y-3">
               {notForWhom.map((item) => (
                 <li key={item} className="flex gap-3">

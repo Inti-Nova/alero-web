@@ -41,8 +41,8 @@ export default async function PostPage({ params }: Props) {
         <header className="container-site pt-14 pb-8 sm:pt-20">
           <div className="max-w-3xl">
             <Eyebrow accent={accent}>{topicLabel[post.topic]}</Eyebrow>
-            <h1 className="text-4xl sm:text-5xl">{post.title}</h1>
-            <p className="mt-5 text-xl text-tinta-soft">{post.excerpt}</p>
+            <h1 className="text-3xl sm:text-4xl">{post.title}</h1>
+            <p className="mt-5 text-lg text-tinta-soft">{post.excerpt}</p>
             {post.publishedAt && (
               <p className="mt-4 text-sm text-tinta-soft">{formatDate(post.publishedAt.slice(0, 10))}</p>
             )}

@@ -58,7 +58,7 @@ export default async function AdaptacionEscolarPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow>¿Te suena?</Eyebrow>
-            <h2 className="text-3xl">Señales de que este acompañamiento puede ayudarte</h2>
+            <h2 className="text-2xl">Señales de que este acompañamiento puede ayudarte</h2>
             <p className="mt-4 text-tinta-soft">
               La ansiedad de separación entre los 2 y los 6 años es esperable. Lo que marca la
               diferencia es cómo la acompañamos los adultos.
@@ -71,7 +71,7 @@ export default async function AdaptacionEscolarPage() {
       <Section>
         <div className="max-w-2xl">
           <Eyebrow>Estructura del paquete</Eyebrow>
-          <h2 className="text-3xl">{service.sessions}</h2>
+          <h2 className="text-2xl">{service.sessions}</h2>
           <p className="mt-4 text-tinta-soft">
             {service.format}. Entre sesiones puedes escribirme para ajustar lo que haga falta.
           </p>
@@ -89,16 +89,16 @@ export default async function AdaptacionEscolarPage() {
       </Section>
 
       <Section tone="terracota-soft">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl">Qué incluye</h2>
+            <h2 className="text-2xl">Qué incluye</h2>
           </div>
           <CheckList items={service.includes} />
         </div>
       </Section>
 
       <Section>
-        <div className="space-y-6">
+        <div className="space-y-4">
           <Disclaimer />
           <p className="text-tinta-soft">
             ¿Tu tema es más el inglés en casa que el colegio? Mira el acompañamiento en{" "}

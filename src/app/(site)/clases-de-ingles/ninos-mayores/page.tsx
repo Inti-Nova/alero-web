@@ -48,7 +48,7 @@ export default function NinosMayoresPage() {
       <Section tone="salvia-soft">
         <div className="max-w-2xl">
           <Eyebrow accent="salvia">Diseño Universal de Aprendizaje</Eyebrow>
-          <h2 className="text-3xl">Tres principios que cambian cómo se siente una clase</h2>
+          <h2 className="text-2xl">Tres principios que cambian cómo se siente una clase</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {dua.map((item) => (
@@ -64,7 +64,7 @@ export default function NinosMayoresPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow accent="salvia">Neuroplasticidad, en palabras simples</Eyebrow>
-            <h2 className="text-3xl">Por qué este es un buen momento</h2>
+            <h2 className="text-2xl">Por qué este es un buen momento</h2>
             <p className="mt-4 text-tinta-soft">
               El cerebro de un niño reorganiza sus conexiones con mucha facilidad. Eso significa que
               la exposición frecuente y con sentido al inglés deja huella rápido, sobre todo en
@@ -73,7 +73,7 @@ export default function NinosMayoresPage() {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl">Cómo se ven las clases</h3>
+            <h3 className="text-xl">Cómo se ven las clases</h3>
             <div className="mt-4">
               <CheckList items={looksLike} accent="salvia" />
             </div>

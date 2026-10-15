@@ -7,7 +7,7 @@ export function ServiceCard({ service, eyebrow }: { service: ServiceView; eyebro
   return (
     <Card accent={service.accent} className="flex h-full flex-col">
       {eyebrow && <Eyebrow accent={service.accent}>{eyebrow}</Eyebrow>}
-      <h3 className="text-2xl">{service.name}</h3>
+      <h3 className="text-xl">{service.name}</h3>
       <p className="mt-1 text-sm font-semibold text-tinta-soft">{service.audience}</p>
       <p className="mt-4 flex-1">{service.summary}</p>
       <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
@@ -22,7 +22,7 @@ export function ServiceCard({ service, eyebrow }: { service: ServiceView; eyebro
       </dl>
       <Link
         href={service.href}
-        className={`mt-6 inline-flex items-center gap-2 font-bold ${arrow} underline-offset-4 hover:underline`}
+        className={`mt-5 inline-flex items-center gap-2 font-bold ${arrow} underline-offset-4 hover:underline`}
       >
         Conocer más <span aria-hidden>→</span>
       </Link>

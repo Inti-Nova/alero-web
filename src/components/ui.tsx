@@ -5,7 +5,7 @@ import type { Accent } from "@/content/services";
 type Variant = "terracota" | "salvia" | "outline" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-base font-semibold transition-colors focus-visible:outline-offset-4";
+  "inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-offset-4";
 
 const variants: Record<Variant, string> = {
   terracota: "bg-terracota text-tinta hover:bg-terracota-deep hover:text-crema",
@@ -35,7 +35,7 @@ export function Button({ variant = "terracota", className = "", ...props }: Butt
 export function Eyebrow({ children, accent = "terracota" }: { children: ReactNode; accent?: Accent }) {
   const color = accent === "terracota" ? "text-terracota-deep" : "text-salvia-deep";
   return (
-    <p className={`mb-3 text-sm font-bold uppercase tracking-[0.18em] ${color}`}>{children}</p>
+    <p className={`mb-2 text-xs font-bold uppercase tracking-[0.18em] ${color}`}>{children}</p>
   );
 }
 
@@ -57,7 +57,7 @@ export function Section({
     "salvia-soft": "bg-salvia-soft",
   };
   return (
-    <section id={id} className={`${tones[tone]} py-16 sm:py-20 ${className}`}>
+    <section id={id} className={`${tones[tone]} py-10 sm:py-12 ${className}`}>
       <div className="container-site relative z-10">{children}</div>
     </section>
   );
@@ -77,12 +77,12 @@ export function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <header className="container-site pt-14 pb-10 sm:pt-20 sm:pb-14">
+    <header className="container-site pt-8 pb-6 sm:pt-12 sm:pb-8">
       <div className="max-w-3xl">
         {eyebrow && <Eyebrow accent={accent}>{eyebrow}</Eyebrow>}
-        <h1 className="text-4xl sm:text-5xl">{title}</h1>
-        {lead && <p className="mt-5 text-xl text-tinta-soft">{lead}</p>}
-        {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
+        <h1 className="text-3xl sm:text-4xl">{title}</h1>
+        {lead && <p className="mt-4 text-lg text-tinta-soft">{lead}</p>}
+        {children && <div className="mt-6 flex flex-wrap gap-3">{children}</div>}
       </div>
     </header>
   );
@@ -104,7 +104,7 @@ export function Card({
         ? "border-salvia/50"
         : "border-linea";
   return (
-    <div className={`rounded-card border bg-crema-dark p-6 sm:p-8 ${border} ${className}`}>
+    <div className={`rounded-card border bg-crema-dark p-5 sm:p-6 ${border} ${className}`}>
       {children}
     </div>
   );

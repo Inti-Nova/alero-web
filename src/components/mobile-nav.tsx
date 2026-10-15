@@ -60,7 +60,7 @@ export function MobileNav() {
                 <Link
                   href={item.href}
                   aria-current={pathname.startsWith(item.href) ? "page" : undefined}
-                  className="block rounded-lg px-3 py-3 text-lg font-semibold hover:bg-crema-dark aria-[current=page]:text-terracota-deep"
+                  className="block rounded-lg px-3 py-2.5 font-semibold hover:bg-crema-dark aria-[current=page]:text-terracota-deep"
                 >
                   {item.label}
                 </Link>
@@ -69,7 +69,7 @@ export function MobileNav() {
             <li className="mt-2 px-3 pb-2">
               <Link
                 href="/agenda"
-                className="block rounded-full bg-terracota px-5 py-3 text-center font-semibold text-tinta"
+                className="block rounded-full bg-terracota px-4 py-2.5 text-center text-sm font-semibold text-tinta"
               >
                 Agendar una sesión
               </Link>

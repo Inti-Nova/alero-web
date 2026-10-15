@@ -53,7 +53,7 @@ export default async function BilinguismoTempranoPage() {
       <Section>
         <div className="max-w-2xl">
           <Eyebrow>Lo que suelo escuchar</Eyebrow>
-          <h2 className="text-3xl">Tres ideas que frenan a muchas familias</h2>
+          <h2 className="text-2xl">Tres ideas que frenan a muchas familias</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {myths.map((m) => (
@@ -69,7 +69,7 @@ export default async function BilinguismoTempranoPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <Eyebrow>Estructura del paquete</Eyebrow>
-            <h2 className="text-3xl">{service.sessions}</h2>
+            <h2 className="text-2xl">{service.sessions}</h2>
             <p className="mt-4 text-tinta-soft">
               {service.format}. El espacio entre sesiones es a propósito: necesitas tiempo para
               probar en casa y volver con observaciones reales.
@@ -81,7 +81,7 @@ export default async function BilinguismoTempranoPage() {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl">Qué incluye</h3>
+            <h3 className="text-xl">Qué incluye</h3>
             <div className="mt-4">
               <CheckList items={service.includes} />
             </div>
@@ -90,7 +90,7 @@ export default async function BilinguismoTempranoPage() {
       </Section>
 
       <Section>
-        <div className="space-y-6">
+        <div className="space-y-4">
           <Disclaimer />
           <p className="text-tinta-soft">
             ¿Prefieres que sea yo quien trabaje directamente con tu hijo o hija? Mira las{" "}

@@ -28,10 +28,10 @@ export default async function ContactoPage() {
             <ContactForm />
           </Card>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <Card>
               <Eyebrow>Más directo</Eyebrow>
-              <h2 className="text-2xl">Escríbeme por WhatsApp</h2>
+              <h2 className="text-xl">Escríbeme por WhatsApp</h2>
               <p className="mt-2 text-tinta-soft">
                 Es el canal más rápido. Cuéntame en un mensaje la edad de tu hijo o hija y qué te
                 preocupa.
