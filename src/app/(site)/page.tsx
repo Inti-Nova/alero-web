@@ -87,7 +87,7 @@ export default async function HomePage() {
       <ScrollLine />
 
       <div className="grid gap-y-10 py-6 sm:py-8 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-12 lg:py-10">
-        <Row figure="family" size={250} side="right" start>
+        <Row figure="familia" size={290} side="right" start>
           <Eyebrow>Acompañamiento educativo e inglés para niños</Eyebrow>
           <h1 className="text-3xl sm:text-4xl">
             Estrategias concretas para que tu hijo se adapte al colegio y crezca con el inglés.
@@ -107,7 +107,7 @@ export default async function HomePage() {
           </p>
         </Row>
 
-        <Row figure="book" size={200} side="left">
+        <Row figure="libro" size={230} side="left">
           <div id="servicios" className="scroll-mt-28">
             <Eyebrow>Dos caminos, una misma mirada</Eyebrow>
             <h2 className="text-2xl sm:text-3xl">¿Qué estás buscando hoy?</h2>
@@ -131,7 +131,7 @@ export default async function HomePage() {
 
         <Transition figure="heart-pass" size={120} />
 
-        <Row figure="person-speech" size={270} side="right">
+        <Row figure="nino-leyendo" size={280} side="right">
           <Card accent="salvia" className="flex flex-col">
             <Eyebrow accent="salvia">Para niños y niñas</Eyebrow>
             <h3 className="text-xl">Clases de inglés personalizadas</h3>
@@ -146,7 +146,7 @@ export default async function HomePage() {
           </Card>
         </Row>
 
-        <Row figure="hands-plant" size={250} side="left">
+        <Row figure="manos-planta" size={240} side="left">
           <Eyebrow>Cómo trabajamos</Eyebrow>
           <h2 className="text-2xl sm:text-3xl">Sin teoría suelta. Con pasos para esta semana.</h2>
           <ol className="mt-5 space-y-4">
@@ -164,7 +164,7 @@ export default async function HomePage() {
           </ol>
         </Row>
 
-        <Row figure="frame" size={300} side="right">
+        <Row figure="marco" size={300} side="right">
           <Eyebrow accent="salvia">Quién te acompaña</Eyebrow>
           <h2 className="text-2xl sm:text-3xl">{siteConfig.ownerName}</h2>
           <p className="mt-4 text-lg">
@@ -186,7 +186,7 @@ export default async function HomePage() {
           </Link>
         </Row>
 
-        <Transition figure="hands-hearts" size={240} height={250} />
+        <Transition figure="manos-corazones" size={260} height={280} />
         <Transition figure="heart-end" size={120} />
 
         <div data-line-text className="relative z-10 lg:col-span-2">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/cta-band";
 import { Disclaimer } from "@/components/disclaimer";
+import { ScrollLine } from "@/components/scroll-line";
 import { ButtonLink, Card, CheckList, Eyebrow, PageHeader, Section } from "@/components/ui";
 import { getServiceBySlug } from "@/modules/catalog";
 
@@ -38,8 +39,9 @@ export default async function BilinguismoTempranoPage() {
   const agendaHref = `/agenda?servicio=${service.slug}`;
 
   return (
-    <>
-      <PageHeader
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="globo-terraqueo" figureSize={240}
         eyebrow="Acompañamiento educativo · Línea 2"
         title="Bilingüismo temprano"
         lead={service.valueProposition}
@@ -107,6 +109,6 @@ export default async function BilinguismoTempranoPage() {
         text="Agenda la primera sesión o cuéntame primero cómo es la rutina de tu familia."
         agendaHref={agendaHref}
       />
-    </>
+    </div>
   );
 }

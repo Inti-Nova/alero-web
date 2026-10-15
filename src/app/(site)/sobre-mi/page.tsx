@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/cta-band";
 import { Disclaimer } from "@/components/disclaimer";
+import { ScrollLine } from "@/components/scroll-line";
 import { Card, Eyebrow, PageHeader, Section } from "@/components/ui";
 import { siteConfig } from "@/config/site";
 
@@ -41,8 +42,9 @@ const methods = [
 
 export default function SobreMiPage() {
   return (
-    <>
-      <PageHeader eyebrow="Sobre mí" title={siteConfig.ownerName} lead="Educadora bilingüe de primera infancia. Acompaño a familias con lo que aprendí en años de aula y en cómo aprende y se regula un niño pequeño." />
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="buho" figureSize={240} eyebrow="Sobre mí" title={siteConfig.ownerName} lead="Educadora bilingüe de primera infancia. Acompaño a familias con lo que aprendí en años de aula y en cómo aprende y se regula un niño pequeño." />
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
@@ -118,6 +120,6 @@ export default function SobreMiPage() {
       </Section>
 
       <CtaBand />
-    </>
+    </div>
   );
 }

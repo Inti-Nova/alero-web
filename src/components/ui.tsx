@@ -63,26 +63,47 @@ export function Section({
   );
 }
 
+/**
+ * Cabecera de página. Si recibe `figure`, reserva una columna a la derecha (solo
+ * en pantallas grandes) donde la línea animada dibuja esa figura; la página debe
+ * ir envuelta en un `data-line-root` con `<ScrollLine />` dentro.
+ */
 export function PageHeader({
   eyebrow,
   title,
   lead,
   accent = "terracota",
+  figure,
+  figureSize = 220,
   children,
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
   accent?: Accent;
+  figure?: string;
+  figureSize?: number;
   children?: ReactNode;
 }) {
+  const text = (
+    <div data-line-text className="relative z-10 max-w-3xl">
+      {eyebrow && <Eyebrow accent={accent}>{eyebrow}</Eyebrow>}
+      <h1 className="text-3xl sm:text-4xl">{title}</h1>
+      {lead && <p className="mt-4 text-lg text-tinta-soft">{lead}</p>}
+      {children && <div className="mt-6 flex flex-wrap gap-3">{children}</div>}
+    </div>
+  );
+  if (!figure) {
+    return <header className="container-site pt-8 pb-6 sm:pt-12 sm:pb-8">{text}</header>;
+  }
   return (
     <header className="container-site pt-8 pb-6 sm:pt-12 sm:pb-8">
-      <div className="max-w-3xl">
-        {eyebrow && <Eyebrow accent={accent}>{eyebrow}</Eyebrow>}
-        <h1 className="text-3xl sm:text-4xl">{title}</h1>
-        {lead && <p className="mt-4 text-lg text-tinta-soft">{lead}</p>}
-        {children && <div className="mt-6 flex flex-wrap gap-3">{children}</div>}
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] lg:items-center lg:gap-x-10">
+        {text}
+        <div aria-hidden className="relative hidden lg:block" style={{ minHeight: figureSize + 24 }}>
+          <span data-line="start" className="absolute top-0 left-0 h-px w-px" />
+          <span data-line={figure} data-line-size={figureSize} className="absolute top-1/2 left-1/2 h-px w-px" />
+        </div>
       </div>
     </header>
   );

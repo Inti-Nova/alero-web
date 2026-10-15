@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/cta-band";
 import { Disclaimer } from "@/components/disclaimer";
+import { ScrollLine } from "@/components/scroll-line";
 import { ButtonLink, Card, CheckList, Eyebrow, PageHeader, Section } from "@/components/ui";
 import { getServiceBySlug } from "@/modules/catalog";
 
@@ -42,8 +43,9 @@ export default async function AdaptacionEscolarPage() {
   const agendaHref = `/agenda?servicio=${service.slug}`;
 
   return (
-    <>
-      <PageHeader
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="casita" figureSize={220}
         eyebrow="Acompañamiento educativo · Línea 1"
         title="Adaptación escolar"
         lead={service.valueProposition}
@@ -115,6 +117,6 @@ export default async function AdaptacionEscolarPage() {
         text="Agenda la primera sesión o escríbeme si quieres contarme el caso antes."
         agendaHref={agendaHref}
       />
-    </>
+    </div>
   );
 }

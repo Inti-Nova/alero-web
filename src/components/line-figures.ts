@@ -8,6 +8,8 @@
  * escalarlas y moverlas sea una simple transformación de puntos.
  */
 
+import { importedFigures } from "./figures";
+
 export interface Point {
   x: number;
   y: number;
@@ -658,6 +660,7 @@ const handsHearts: Figure = (() => {
 })();
 
 export const figures = {
+  ...importedFigures,
   family,
   "hands-plant": handsPlant,
   "hands-hearts": handsHearts,

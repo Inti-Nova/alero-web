@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Disclaimer } from "@/components/disclaimer";
+import { ScrollLine } from "@/components/scroll-line";
 import { ButtonLink, Card, Eyebrow, PageHeader, Section } from "@/components/ui";
 import { getContactLinks } from "@/modules/settings";
 import { ContactForm } from "./contact-form";
@@ -15,8 +16,9 @@ export default async function ContactoPage() {
   const { whatsappUrl, email, instagramUrl } = await getContactLinks();
 
   return (
-    <>
-      <PageHeader
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="sobre" figureSize={200}
         eyebrow="Contacto"
         title="Cuéntame qué está pasando"
         lead="Si no sabes qué servicio te sirve o prefieres hablar antes de agendar, este es el lugar. Te respondo con calma y sin compromiso."
@@ -71,6 +73,6 @@ export default async function ContactoPage() {
           </div>
         </div>
       </Section>
-    </>
+    </div>
   );
 }

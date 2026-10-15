@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/cta-band";
+import { ScrollLine } from "@/components/scroll-line";
 import { ButtonLink, Card, CheckList, Eyebrow, PageHeader, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -19,8 +20,9 @@ const looksLike = [
 
 export default function PrimeraInfanciaPage() {
   return (
-    <>
-      <PageHeader
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="osito" figureSize={230}
         accent="salvia"
         eyebrow="Clases de inglés · 2 a 6 años"
         title="Primera infancia"
@@ -87,6 +89,6 @@ export default function PrimeraInfanciaPage() {
         text="Sin compromiso de paquete. Vemos cómo responde tu hijo o hija y definimos el plan."
         agendaHref="/agenda?servicio=clases-de-ingles"
       />
-    </>
+    </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Disclaimer } from "@/components/disclaimer";
+import { ScrollLine } from "@/components/scroll-line";
 import { PageHeader, Section } from "@/components/ui";
 import { listServices } from "@/modules/catalog";
 import { BookingWizard, type WizardService } from "./booking-wizard";
@@ -25,8 +26,9 @@ export default async function AgendaPage({ searchParams }: Props) {
   }));
 
   return (
-    <>
-      <PageHeader
+    <div data-line-root className="relative">
+      <ScrollLine />
+      <PageHeader figure="calendario" figureSize={210}
         eyebrow="Agenda"
         title="Reserva tu sesión"
         lead="Elige el tipo de sesión, el día y la hora que mejor le sirva a tu familia. Recibirás un correo con los pasos para confirmar."
@@ -51,6 +53,6 @@ export default async function AgendaPage({ searchParams }: Props) {
           <Disclaimer compact />
         </div>
       </Section>
-    </>
+    </div>
   );
 }
